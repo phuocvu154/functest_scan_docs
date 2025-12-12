@@ -48,6 +48,9 @@ dependencies:
 
   hive: ^2.2.3
   hive_flutter: ^1.1.0
+  pdf_render_maintained: ^1.6.1
+  image: ^4.5.4
+  path: ^1.9.1
 
 dev_dependencies:
   flutter_test:

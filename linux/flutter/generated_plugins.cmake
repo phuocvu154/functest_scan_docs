@@ -4,6 +4,7 @@
 
 list(APPEND FLUTTER_PLUGIN_LIST
   flutter_doc_scanner
+  pdf_render_maintained
   url_launcher_linux
 )
 

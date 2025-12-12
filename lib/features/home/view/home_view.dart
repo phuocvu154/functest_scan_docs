@@ -161,13 +161,14 @@ class _HomeViewState extends State<HomeView> {
                               title: "Tất cả Công cụ",
                               onTap: () {
                                 // TODO: mở màn Tools khi bạn làm
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(
-                                    content: Text(
-                                      "Tính năng Tất cả Công cụ (TODO)",
-                                    ),
-                                  ),
-                                );
+                                // ScaffoldMessenger.of(context).showSnackBar(
+                                //   const SnackBar(
+                                //     content: Text(
+                                //       "Tính năng Tất cả Công cụ (TODO)",
+                                //     ),
+                                //   ),
+                                // );
+                                Navigator.pushNamed(context, '/tools');
                               },
                             ),
                           ),

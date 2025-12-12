@@ -13,6 +13,8 @@ import 'features/documents/model/document_item.dart';
 import 'features/documents/repository/document_repository.dart';
 import 'features/documents/viewmodel/documents_viewmodel.dart';
 import 'features/home/view/home_view.dart';
+import 'features/tools/viewmodel/tools_viewmodel.dart';
+import 'features/tools/view/tools_view.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -40,6 +42,7 @@ class App extends StatelessWidget {
         ChangeNotifierProvider(
           create: (_) => PdfViewModel(PdfRepository(), docRepo),
         ),
+        ChangeNotifierProvider(create: (_) => ToolsViewModel()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -52,6 +55,7 @@ class App extends StatelessWidget {
             final path = ModalRoute.of(context)!.settings.arguments as String;
             return PdfPreviewView(path: path);
           },
+          '/tools': (_) => const ToolsView(),
         },
       ),
     );
